@@ -1,6 +1,7 @@
 // Remote Content
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 5000;
 
 // Local Developer content
 const forecastByCoordinates = require('./useCases/forcastByCoordinates.js');
@@ -20,7 +21,7 @@ app.get('/api/weather',async (request, response)=>{
 
 
 // Setup server
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("Server is up and running")
 })
 
